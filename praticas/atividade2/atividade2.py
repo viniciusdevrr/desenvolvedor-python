@@ -13,4 +13,4 @@ plano = input("Voce tem plano de saúde? True ou False: ")
 
 regras = (18 <= idade > 60) and (plano == True)
 
-print("Seu nome é",nome ,", você tem 22 anos, tem plano?",plano,". Você foi aceito?", regras)
+print("Seu nome é", nome ,", você tem", idade ,"anos, tem plano?", plano ,". Você foi aceito?", regras)

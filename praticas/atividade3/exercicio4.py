@@ -1,15 +1,17 @@
 print("Questão 4: O Boletim Escolar Automático (Aritmética + Lógica AND)\n")
 
-nome = input("Digite o nome seu nome: ")
-nota1 = float(input("Digite sua nota 1: "))
-nota2 = float(input("Digite sua nota 2: "))
+nota1 = float(input("Digite sua primeira nota: "))
+nota2 = float(input("Digite sua segunda nota: "))
+frequencia_digitada = int(input("Digite a quantidade de frequencia: "))
+
 media = (nota1 + nota2) / 2
+porcentagem_frequencia_min = (200 * 75) / 100
 
-frequencia = int(input("Digite a porcetagem de frequencia: "))
+frequencia_do_aluno = (frequencia_digitada * 200) / 100
 
-resultado = (media >= 6.0) and (frequencia >= 75)
+aprovado = (frequencia_do_aluno < 75) and (media >= 6.0)
 
-print(resultado)
+print(f"A média do aluno foi: {media:.2f}. Ele foi aprovado: {aprovado}")
 
 
 
