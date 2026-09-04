@@ -39,7 +39,3 @@ print("comparacao: ", bool(resultado_comp));
 print(type(resultado_comp));
 
 print("--------------------------------------------------------")
-
-
-
-
