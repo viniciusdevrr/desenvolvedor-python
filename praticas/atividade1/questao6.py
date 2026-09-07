@@ -1,11 +1,12 @@
-print("Questão 6: Trocando os Valores");
+print("Questão 6: Trocando os Valores \n");
+print("Valores antigos");
 X = 15
 Y = 30
 
 print("X =", X);
 print("Y =", Y);
 
-print("Trocando os Valores");
+print("\nValores atualizados");
 X, Y = Y, X
 print("X =", X);
 print("Y =", Y);
