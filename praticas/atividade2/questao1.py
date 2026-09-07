@@ -9,8 +9,8 @@ de idade ou idoso ou se não tiver plano de saúde, que ele não será aceito no
 
 nome = input("Digite seu nome: ")
 idade = int(input("Digite sua idade: "))
-plano = input("Voce tem plano de saúde? True ou False: ")
+plano = input("Voce tem plano de saúde? Digite True ou False: ") == "True"
 
-regras = (18 <= idade > 60) and (plano == True)
+regras = (idade >= 18 and idade < 60) and plano
 
-print("Seu nome é", nome ,", você tem", idade ,"anos, tem plano?", plano ,". Você foi aceito?", regras)
+print("Seu nome é", nome ,", você tem", idade ,"anos. Tem plano?", plano ,". Você foi aceito?", regras)
