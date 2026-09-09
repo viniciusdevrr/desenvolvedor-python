@@ -1,7 +1,7 @@
 print("Questão 6: Jogo da Adivinhação com Tentativas\n")
 
 num_secret = 27
-tentativas = 0
+tentativas = 1
 
 print("Tente adivinhar o numero que estou pensando!")
 
