@@ -6,7 +6,7 @@ while True:
     opcao = int(input("Escolha uma opcao: "))
 
     if opcao == 1:
-        print("Ola, seja bem muito bem-vindo(a)!\n")
+        print("Ola, seja muito bem-vindo(a)!\n")
     elif opcao == 2:
         print("Programa encerrado!")
         break

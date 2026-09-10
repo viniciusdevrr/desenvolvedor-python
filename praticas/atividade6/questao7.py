@@ -1,4 +1,4 @@
-print("Questão 7: Controle de Orçamento\n")
+print("Questão 7: Controle de Orçamento \n")
 
 orcamento = 500.00
 

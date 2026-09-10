@@ -1,9 +1,9 @@
 print("Questão 5: Tabuada Simples \n")
 
-numero = int(input("Digite umm numero e veja a tabuada: "))
+numero = int(input("Digite um numero e veja a tabuada dele: "))
 contador = 1
 
-print("Tabuada do: ", numero)
+print("Tabuada do:", numero)
 
 while contador <= 10:
     resultado = numero * contador

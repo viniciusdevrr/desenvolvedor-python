@@ -1,4 +1,4 @@
-print("Questão 6: Jogo da Adivinhação com Tentativas\n")
+print("Questão 6: Jogo da Adivinhação com Tentativas \n")
 
 num_secret = 27
 tentativas = 1
@@ -15,4 +15,4 @@ while True:
     tentativas += 1
 
 
-print(f"Parabéns! Você acertou o número secreto em {tentativas} tentativas!")
+print(f"Parabéns! Você acertou o número secreto em [{tentativas}] tentativas!")
