@@ -12,42 +12,24 @@ Você irá decidir qual funcionário será demitido ou
 receberá aumento pelo index do funcionário lista[]"""
 
 funcionarios = []
+
+while True:
+    nome = input("Digite o nome do funcionário ou [sair]: ")
+            
+    if nome == "sair":
+        break
+
+    funcionarios.append(nome)
 aumentos = []
 demitidos = []
 
-db_func = [
-    funcionarios,
-    aumentos,
-    demitidos
-]
-while True:
-    while True:
-        add_func = input("Adicione um funcionario: ")
-        funcionarios.append(funcionarios)
-        break
-    break
+for index in range(len(funcionarios)):
+    if index % 2 == 0:
+        aumentos.append(funcionarios[index])
+    else:
+        demitidos.append(funcionarios[index])
 
-for banco in db_func:
-    for index in db_func:
-        if index in funcionarios:
-            if index == funcionarios[0]:
-                print(f"O funcionario {index} recebeu aumento")
-
-        if index in demitidos:
-            if index == demitidos[2]:
-                print(f"O funcionario {index} foi demitido")
-
-
-
-
-
-
-
-
-
-
-
-
-print(lista)
+print(f"\nFuncionários com receberam aumento: {aumentos}")
+print(f"Funcionários que foram demitidos: {demitidos}")
 
 
