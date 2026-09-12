@@ -20,6 +20,7 @@ while True:
         break
 
     funcionarios.append(nome)
+
 aumentos = []
 demitidos = []
 
