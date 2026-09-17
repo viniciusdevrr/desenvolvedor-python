@@ -1,3 +1,5 @@
+print("Atividade 1 - Estrutura de Classes \n")
+
 class Carro:
     def __init__(self, marca, ano, nome, modelo, cor):
         self.marca = marca
@@ -15,7 +17,7 @@ class Carro:
                 f"Cor: {self.cor}\n")
 
     def ligar(self):
-        return print(f"O {self.nome} está Ligado!")
+        print(f"O {self.nome} está Ligado!")
 
     def desligar(self):
         print(f"O {self.nome} está Desligado!")
