@@ -1,77 +1,79 @@
-# FORMA CONVENCIONAL NAO UTILIZADA NO PYTHON
+# FORMA CONVENCIONAL NÃO UTILIZADA NO PYTHON
 class ContaBancaria: # nome da classe
-    def __init__(self, titular, saldo): #metodo construtor
+    def __init__(self, titular, saldo): # metodo construtor
         self.titular = titular # self.atributo = valor do parametro
-        self.__saldo = saldo #privado
+        self.__saldo = saldo # private
 
-    # metodo Getters e Setters (Ger = Pegar e Set = Inserir)
-    # Metodos Convencionais
+    # metodos Getters e Setters (Get = Pegar e Set = Inserir)
+    # METODOS CONVENCIONAIS
     def get_titular(self):
         senha = 1234
-        senha_digitada = int(input("Digite sua senha para buscar titular: "))
+        senha_digitada = int(input('(GET) Digite sua senha: '))
 
         if senha == senha_digitada:
             return self.titular
         else:
-            return "Senha incorreta!"
+            return 'Senha incorreta!'
 
     def set_titular(self, novo_titular):
-        senha = 1234
-        senha_digitada = int(input("Digite sua senha para atualizar titular: "))
+        self.__saldo = novo_titular
 
-        if senha == senha_digitada:
-            self.titular = novo_titular
-            return "Titular atualizada!"
-        else:
-            return "Senha incorreta!"
-
-# conta_banco = ContaBancaria('Vinicius', 10)
+# conta_banco = ContaBancaria("João", 10000)
+# #print(conta_banco.titular) # Acesso diretamente o atributo
 # print(conta_banco.get_titular())
 #
-# conta_banco.set_titular("Ciclano")
+# #conta_banco.titular = "Fulano" # modificando diretamente o atributo
+# conta_banco.set_titular("Ciclano") # modificando por metodo
 # print(conta_banco.get_titular())
 
-# METODO UTILIZADO NO PYTHON
-class ContaBancariaCorreta:
+class ContaBancariaCorreta: # LÓGICA UTILIZADA NO PYTHON de get e set
     def __init__(self, titular, saldo):
         self.titular = titular
-        self.__saldo = saldo
+        self.__saldo = saldo # private
 
-    @property # Anotation -> anotaçao
-    def saldo(self): # Criando um GET
+    @property # anotation -> anotação
+    def saldo(self): # funciona como o GET
         return self.__saldo
 
-    @saldo.setter # Criando um SET novo no metodo
-    def saldo(self, novo_saldo):
+    @saldo.setter # criando um SET novo no metodo
+    # quando o usuário digitar objeto.saldo
+    # acessa o metodo
+    def saldo(self, novo_saldo): # funciona como o SET
         if novo_saldo < 0:
-            print("Não é possivel colocar saldo negativo!")
+            print("Não é possivel colocar saldo negativo")
         else:
-            print(f"Saldo atual: {novo_saldo}")
             self.__saldo = novo_saldo
 
     def sacar(self, valor_saque):
         if valor_saque <= self.__saldo:
-            print(f"Quantidade retirada: {valor_saque}")
             self.saldo -= valor_saque
-            print("Saldo restante: R$", self.__saldo)
+            print(f'Quantidade retirada: {valor_saque}')
+            print(f'Saldo restante: {self.saldo}')
         else:
+            print(f'Saldo atual: {self.saldo}')
             print(f"Valor de saque {valor_saque}")
-            print(f"Saldo atual: {valor_saque}")
-            print("Saldo insuficiente!")
+            print("Saldo insuficiente")
 
     def transferir(self, valor_transfer):
         if valor_transfer <= self.__saldo:
-            self.__saldo -= valor_transfer
+            print(f'Quantidade transferida: {valor_transfer}')
+            self.saldo -= valor_transfer
         else:
-            print(f"Valor da transferencia: {valor_transfer}")
-            print(f"Saldo atual: {self.__saldo}")
-            print("Saldo insuficiente!")
+            print(f'Saldo atual: {self.saldo}')
+            print(f"Valor de transeferencia {valor_transfer}")
+            print("Saldo insuficiente")
 
-usuario_banco_correto = ContaBancariaCorreta("Vinicius", 10000)
-print(usuario_banco_correto.saldo)
+usuario_banco_correto = ContaBancariaCorreta("Jose", 500)
+print("Saldo: ", usuario_banco_correto.saldo)
 
-usuario_banco_correto.saldo = -20000
+print("Adicinando fundos ao banco")
+usuario_banco_correto.saldo = 5000
+usuario_banco_correto.__saldo = -100000
 
+print("Saldo: ", usuario_banco_correto.saldo)
 usuario_banco_correto.sacar(1000)
-
-usuario_banco_correto.transferir(50000)
+print("Saldo: ", usuario_banco_correto.saldo)
+usuario_banco_correto.transferir(1000)
+print("Saldo: ", usuario_banco_correto.saldo)
+usuario_banco_correto.transferir(10000)
+print(usuario_banco_correto.__dict__)
