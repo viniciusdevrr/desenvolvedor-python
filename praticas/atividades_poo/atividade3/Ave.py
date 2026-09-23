@@ -5,17 +5,9 @@ class Ave(Animal):
         super().__init__(nome, idade, nivel_fome)
         self.__envergadura_asas = envergadura_asas
 
-    @property
-    def envergadura_asas(self):
-        return self.__envergadura_asas
-
-    @envergadura_asas.setter
-    def envergadura_asas(self, envergadura_asas):
-        self.__envergadura_asas = envergadura_asas
-
     def voar(self):
         if self.nivel_fome <= 80:
-            print(f"{self.nome} voou com suas asas de {self.envergadura_asas} cm!")
+            print(f"{self.nome} voou com suas asas de {self.__envergadura_asas} cm!")
             self.nivel_fome += 15
         else:
             print(f"{self.nome} está faminto demais para voar!")

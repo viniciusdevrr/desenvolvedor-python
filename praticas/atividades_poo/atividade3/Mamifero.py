@@ -5,14 +5,6 @@ class Mamifero(Animal):
         super().__init__(nome, idade, nivel_fome)
         self.__velocidade_kmh = velocidade_kmh
 
-    @property
-    def velocidade_kmh(self):
-        return self.__velocidade_kmh
-
-    @velocidade_kmh.setter
-    def velocidade_kmh(self, velocidade_kmh):
-        self.__velocidade_kmh = velocidade_kmh
-
     def correr(self):
         print(f"{self.nome} correu a {self.__velocidade_kmh} km/h!")
         self.nivel_fome += 20
