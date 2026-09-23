@@ -3,7 +3,7 @@ from Gato import Gato
 from Cachorro import Cachorro
 from CachorroDomestico import CachorroDomestico
 from Animal import Animal
-from aulas.poo.heranca.exemplo2.Baleia import Baleia
+from Baleia import Baleia
 
 
 # ANIMAL -> Gato, Cachorro
