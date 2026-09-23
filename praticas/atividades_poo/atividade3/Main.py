@@ -20,8 +20,7 @@ class Main:
     # 3. Testando alimentação
     leao.alimentar(50)  # Fome cai de 90 para 40
     leao.alimentar(-10)  # Deve exibir: "Erro: Porção inválida"
-    
-    # 4. Exibição final dos resumos
+
     print("\nResumo do Leao")
     leao.emitir_som()
     leao.exibir_resumo()

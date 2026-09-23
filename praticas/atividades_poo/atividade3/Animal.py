@@ -30,12 +30,10 @@ class Animal:
             novo_nivel = 0
             self.__nivel_fome = novo_nivel
             print("intervalo de 0 a 100")
-
         elif novo_nivel > 100:
             novo_nivel = 100
             self.__nivel_fome = novo_nivel
             print(f"intervalo de 0 a 100")
-
         else:
             self.__nivel_fome = novo_nivel
 
