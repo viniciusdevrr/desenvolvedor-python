@@ -2,7 +2,6 @@ from Mamifero import Mamifero
 from Ave import Ave
 
 class Main:
-    # Instanciando os animais
     leao = Mamifero("Simba", 5, 70, 80)
     gaviao = Ave("Sky", 2, 75, 120)
 
