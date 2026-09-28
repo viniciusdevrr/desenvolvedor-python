@@ -32,8 +32,10 @@ class Mesa:
         for item in self.pedidos:
             print(f"- {item.descricao}: R$ {item.valor}")
 
-        print(f"\nTaxa de serviço ({taxa_servico}%) = R$ {valor_taxa:.2f}")
-        print(f"Total a pagar = R$ {total_final:.2f}")
+        print(f"\nTaxa de serviço: ({taxa_servico}%) R$ {valor_taxa:.2f}")
+        print(f"Total a pagar: R$ {total_final:.2f}")
+
+        self.pedidos.clear()
 
 # Função auxiliar para simular a interface do sistema e capturar as exceções sem quebrar o app
 def registrar_pedido_seguro(mesa, descricao, valor):
@@ -51,8 +53,19 @@ registrar_pedido_seguro(mesa1, "Pizza Margherita", 45.90)
 registrar_pedido_seguro(mesa1, "Refrigerante", 8.50)
 
 # 3. Testando o Tratamento de Exceções (Simulando erro de digitação do garçom)
-print("\n--- TESTANDO ENTRADA INVÁLIDA ---")
+print("\nTESTANDO ENTRADA INVÁLIDA")
 registrar_pedido_seguro(mesa1, "Pudim", "quinze")  # Deve exibir o ALERTA DO SISTEMA e não quebrar
 registrar_pedido_seguro(mesa1, "Café", "5,50")     # Erro comum de vírgula, deve acionar o ALERTA
+
+# 4. Adicionando mais um pedido válido após o erro
+registrar_pedido_seguro(mesa1, "Suco de Laranja", 12.00)
+
+# 5. Fechando a conta com 10% de taxa de serviço
+print("\nFECHAMENTO DA CONTA")
+mesa1.fechar_conta(taxa_servico=10)
+
+# 6. Verificando se a mesa foi limpa
+print("\nVERIFICANDO STATUS DA MESA APÓS FECHAMENTO")
+mesa1.fechar_conta(taxa_servico=10) # A conta deve vir zerada
 
 
