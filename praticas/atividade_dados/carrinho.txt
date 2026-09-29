@@ -1,0 +1,8 @@
+Recibo do Carrinho do vini
+
+Produto: arroz
+Preco do Produto: R$ 12.0
+Produto: feijao
+Preco do Produto: R$ 21.0
+
+Total a pagar: R$ 33.00
