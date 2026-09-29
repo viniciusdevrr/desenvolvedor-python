@@ -1,0 +1,5 @@
+--- Recibo do Carrinho ---
+
+Produto: asdf R$ 124.00
+
+Total a pagar: R$ 124.00
