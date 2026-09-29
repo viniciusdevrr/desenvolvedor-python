@@ -1,5 +1,7 @@
 --- Recibo do Carrinho ---
 
-Produto: asdf R$ 124.00
+Produto: Arroz R$ 12.00
+Produto: Feijao R$ 10.00
+Produto: Carne R$ 18.00
 
-Total a pagar: R$ 124.00
+Total a pagar: R$ 40.00
