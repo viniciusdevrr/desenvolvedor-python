@@ -1,8 +1,9 @@
-Recibo do Carrinho do vini
+Cliente: Vinicius
+RECIBO DO CARRINHO
 
-Produto: arroz
-Preco do Produto: R$ 12.0
-Produto: feijao
-Preco do Produto: R$ 21.0
+Produto: Refri
+Preco do Produto: R$ 33.00
+Produto: Batata
+Preco do Produto: R$ 33.00
 
-Total a pagar: R$ 33.00
+Total: R$ 66.00
