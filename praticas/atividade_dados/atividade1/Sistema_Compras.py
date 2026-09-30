@@ -43,10 +43,17 @@ with open("carrinho.txt", "r", encoding="utf-8") as arquivo:
 
     termo_busca = f"R$ {total:.2f}"
     posicao = texto.find(termo_busca)
+    # 4. Leitura e exibição final de pagamento
+    print("\n--- PROCESSANDO PAGAMENTO ---")
 
-    if posicao != -1:
-        valor = texto[posicao + 3: posicao + 3 + len(f"{total:.2f}")]
-    else:
+    # Procura se o texto "Total: R$ XX.XX" está dentro do arquivo
+    termo_busca = f"Total: R$ {total:.2f}"
+
+    if termo_busca in texto:
         valor = f"{total:.2f}"
+    else:
+        valor = "Não encontrado"
+
+    print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")
 
     print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")

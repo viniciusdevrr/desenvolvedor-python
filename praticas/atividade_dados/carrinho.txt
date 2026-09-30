@@ -1,9 +1,0 @@
-Cliente: Vinicius
-RECIBO DO CARRINHO
-
-Produto: Refri
-Preco do Produto: R$ 33.00
-Produto: Batata
-Preco do Produto: R$ 33.00
-
-Total: R$ 66.00
