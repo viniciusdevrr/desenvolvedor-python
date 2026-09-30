@@ -55,5 +55,3 @@ with open("carrinho.txt", "r", encoding="utf-8") as arquivo:
         valor = "Não encontrado"
 
     print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")
-
-    print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")
