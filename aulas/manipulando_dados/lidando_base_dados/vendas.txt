@@ -1,0 +1,1 @@
+vinicius;carro;600000.00
