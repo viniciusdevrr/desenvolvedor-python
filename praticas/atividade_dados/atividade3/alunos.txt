@@ -1,4 +1,4 @@
-﻿Ana Silva;101;7.5;8.0;6.5;9.0;Aprovado
+Ana Silva;101;7.5;8.0;6.5;9.0;Aprovado
 Bruno Costa;101;5.0;6.5;4.0;5.5;Reprovado
 Carlos Santos;101;9.0;8.5;9.5;9.0;Aprovado
 Daniela Alves;101;6.0;7.0;6.5;7.5;Aprovado

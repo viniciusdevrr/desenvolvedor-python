@@ -1,95 +1,110 @@
 def acrescentar_aluno():
-    nome = input('Digite o nome do aluno: ')
-    turma = input('Digite o nome da turma: ')
-    bim1 = float(input('Digite a nota do primeiro bimestre: '))
-    bim2 = float(input('Digite a nota do segundo bimestre: '))
-    bim3 = float(input('Digite a nota do terceito bimestre: '))
-    bim4 = float(input('Digite a nota do quarto bimestre: '))
-
-    media = bim1 + bim2 + bim3 + bim4 / 4
-    if media >= 7:
-        print(f'Aprovado!')
-    else:
-        print(f'Reprovado!')
-
-    with open("vendas.txt", "a", encoding="utf-8") as arquivo:
-        arquivo.write(f"{nome};{turma};{bim1};{bim2};{bim3};{bim4};{media}\n")
-    print("Aluno Cadastrado com sucesso!")
-
-def listar_vendas():
     try:
-        with open("vendas.txt", "r", encoding="utf-8") as arquivo:
-            linhas = arquivo.readlines()
-            for linha in linhas:
-                # strip -> retira dos dados espaços desnecessários \n
-                # split -> separa atributos que estão entre ; dentro de uma nova lista
-                linha = linha.strip().split(";")
-                print(f"Vendedor: {2}\n"
-                      f"Produto: {linha[1]}\n"
-                      f"Valor: {linha[2]}")
+        nome = input("Digite o nome do aluno: ")
+        turma = input("Digite a turma: ")
+        bim1 = float(input("Digite a nota do primeiro bimestre: "))
+        bim2 = float(input("Digite a nota do segundo bimestre: "))
+        bim3 = float(input("Digite a nota do terceiro bimestre: "))
+        bim4 = float(input("Digite a nota do quarto bimestre: "))
+
+        media = (bim1 + bim2 + bim3 + bim4) / 4
+        if media >= 7:
+            status = "Aprovado"
+        else:
+            status = "Reprovado"
+
+        with open("alunos.txt", "a", encoding="utf-8") as arquivo:
+            arquivo.write(f"\n{nome};{turma};{bim1};{bim2};{bim3};{bim4};{status}")
+        print("Aluno Cadastrado com sucesso!")
+
     except FileNotFoundError:
-        print("Arquivo não encontrado")
+        print("Arquivo não encontrado ou não existe.")
     except Exception as error:
         print(f"Erro inesperado: {error}")
-    finally:
-        print("Base de dados analisada.")
-
-def somar_todas_as_vendas(valor_total = 0):
-    with open("vendas.txt", "r", encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()
-        for linha in linhas:
-            linha = linha.strip().split(";")
-            valor_produto = float(linha[2])
-
-            valor_total += valor_produto
-    return valor_total
 
 def calcular_media_aluno():
-    with open("vendas.txt", "r", encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()
-        for linha in linhas:
-            linha = linha.strip().split(";")
-            if linha[0] == "João":
-                print(f"O {linha[0]} fez a venda de {linha[1]} por {linha[2]}")
+    try:
+        with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+            linhas = arquivo.readlines()
+            nome = input("Digite o nome do aluno: ")
 
-def maior_venda():
-    with open("vendas.txt", "r", encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()
-        valores_vendas = []
+            encontrado = False
+            for linha in linhas:
+                linha = linha.strip().split(";")
 
-        for linha in linhas:
-            linha = linha.strip().split(";")
-            valores_vendas.append(float(linha[2]))
+                if linha[0] == nome:
+                    media = (float(linha[2]) + float(linha[3]) + float(linha[4]) + float(linha[5])) / 4
+                    print(f"A média de {nome} é {media:.2f}.")
+                    break
 
-        maior_valor = max(valores_vendas)
+            if not encontrado:
+                print("Aluno não encontrado!")
 
-        print(f'O maior valor de venda: {maior_valor}')
+    except FileNotFoundError:
+        print("Arquivo não encontrado ou não existe.")
+    except Exception as error:
+        print(f"Erro inesperado: {error}")
 
-def menor_venda():
-    with open("vendas.txt", "r", encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()
-        valores_vendas = []
+def consultar_status_aluno():
+    try:
+        with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+            linhas = arquivo.readlines()
+            nome = input("Digite o nome do aluno: ").strip()
 
-        for linha in linhas:
-            linha = linha.strip().split(";")
-            valores_vendas.append(float(linha[2]))
+            encontrado = False
+            for linha in linhas:
+                linha = linha.strip().split(";")
 
-        menor_valor = min(valores_vendas)
+                if linha[0] == nome:
+                    print(f"Status: {linha[6]}")
+                    break
 
-        print(f'O maior valor de venda: {menor_valor}')
+            if not encontrado:
+                print("Aluno não encontrado!")
 
-# SIMULANDO UM SISTEMA FUNCIONAL
+    except FileNotFoundError:
+        print("Arquivo não encontrado ou não existe.")
+    except Exception as error:
+        print(f"Erro inesperado: {error}")
+
+def maior_media_turma():
+    try:
+        with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+            linhas = arquivo.readlines()
+            medias = []
+            turma = input("Digite a turma [101, 102, 103, 104]: ").strip()
+
+            encontrado = False
+            for linha in linhas:
+                linha = linha.strip().split(";")
+
+                if linha[1] == turma:
+                    media = (float(linha[2]) + float(linha[3]) + float(linha[4]) + float(linha[5])) / 4
+                    medias.append(media)
+                    encontrado = True
+
+            if encontrado:
+                maior_media = max(medias)
+                print(f"O maior media da turma {turma} é {maior_media}")
+            else:
+                print("Turma não encontrada ou sem alunos cadastrados!")
+
+    except FileNotFoundError:
+        print("Arquivo não encontrado ou não existe.")
+    except Exception as error:
+        print(f"Erro inesperado: {error}")
+
+
 while True:
     finalizar = False
-    print("SISTEMA DE COMPRAS\n\n")
-    opcao = int(input("Escolha uma das opções\n"
-                  "1) Acrescentar aluno\n"
+    print("Sistema de Gestão Escolar\n")
+    opcao = int(input("Escolha uma das opções:\n"
+                  "1) Acrescentar um aluno\n"
                   "2) Calcular média do aluno\n"
-                  "3) Somar todas as vendas\n"
-                  "4) Ver a vendas de um vendedor\n"
-                  "5) Maior venda\n"
-                  "6) Menor venda\n"
-                  "7) Finalizar programa\n"))
+                  "3) Consultar status do aluno\n"
+                  "4) Verificar maior média da turma\n"
+                  "5) Finalizar programa\n"
+                    "= "))
 
     match opcao:
         case 1:
@@ -97,13 +112,9 @@ while True:
         case 2:
             calcular_media_aluno()
         case 3:
-            print(somar_todas_as_vendas())
+            consultar_status_aluno()
         case 4:
-            achar_vendedor()
-        case 5:
-            maior_venda()
-        case 6:
-            menor_venda()
+            maior_media_turma()
         case _:
             print("Finalizando programa...")
             finalizar = True
