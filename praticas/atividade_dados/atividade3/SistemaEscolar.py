@@ -74,23 +74,25 @@ def maior_media_turma():
             medias = []
             turma = input("Digite a turma [101, 102, 103, 104]: ").strip()
 
-            encontrado = False
             for linha in linhas:
                 linha = linha.strip().split(";")
+                nome = linha[0]
 
                 if linha[1] == turma:
                     media = (float(linha[2]) + float(linha[3]) + float(linha[4]) + float(linha[5])) / 4
-                    medias.append(media)
-                    encontrado = True
+                    medias.append([media, nome])
 
-            if encontrado:
-                maior_media = max(medias)
-                print(f"O maior media da turma {turma} é {maior_media}")
-            else:
-                print("Turma não encontrada ou sem alunos cadastrados!")
+            maior_media = max(medias)
+            print(f"MAIOR MEDIA {maior_media}")
+            media = maior_media[0]
+            nome = maior_media[1]
+
+            print(f"O maior media da turma {turma} é do aluno {nome} com {media}")
 
     except FileNotFoundError:
         print("Arquivo não encontrado ou não existe.")
+    except ValueError:
+        print("Turma não encontrada ou sem alunos cadastrados!")
     except Exception as error:
         print(f"Erro inesperado: {error}")
 
