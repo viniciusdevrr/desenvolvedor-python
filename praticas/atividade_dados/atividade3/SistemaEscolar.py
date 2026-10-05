@@ -28,7 +28,6 @@ def calcular_media_aluno():
             linhas = arquivo.readlines()
             nome = input("Digite o nome do aluno: ")
 
-            encontrado = False
             for linha in linhas:
                 linha = linha.strip().split(";")
 
@@ -37,11 +36,10 @@ def calcular_media_aluno():
                     print(f"A média de {nome} é {media:.2f}.")
                     break
 
-            if not encontrado:
-                print("Aluno não encontrado!")
-
     except FileNotFoundError:
         print("Arquivo não encontrado ou não existe.")
+    except ValueError:
+        print("Aluno não encontrado.")
     except Exception as error:
         print(f"Erro inesperado: {error}")
 
@@ -51,7 +49,6 @@ def consultar_status_aluno():
             linhas = arquivo.readlines()
             nome = input("Digite o nome do aluno: ").strip()
 
-            encontrado = False
             for linha in linhas:
                 linha = linha.strip().split(";")
 
@@ -59,11 +56,10 @@ def consultar_status_aluno():
                     print(f"Status: {linha[6]}")
                     break
 
-            if not encontrado:
-                print("Aluno não encontrado!")
-
     except FileNotFoundError:
         print("Arquivo não encontrado ou não existe.")
+    except ValueError:
+        print("Aluno não encontrado.")
     except Exception as error:
         print(f"Erro inesperado: {error}")
 
@@ -72,7 +68,7 @@ def maior_media_turma():
         with open("alunos.txt", "r", encoding="utf-8") as arquivo:
             linhas = arquivo.readlines()
             medias = []
-            turma = input("Digite a turma [101, 102, 103, 104]: ").strip()
+            turma = input("Digite a turma [101, 102, 103, 104, 105]: ").strip()
 
             for linha in linhas:
                 linha = linha.strip().split(";")
@@ -83,11 +79,10 @@ def maior_media_turma():
                     medias.append([media, nome])
 
             maior_media = max(medias)
-            print(f"MAIOR MEDIA {maior_media}")
             media = maior_media[0]
             nome = maior_media[1]
 
-            print(f"O maior media da turma {turma} é do aluno {nome} com {media}")
+            print(f"O maior media da turma {turma} é do aluno {nome} com {media:.2f}.")
 
     except FileNotFoundError:
         print("Arquivo não encontrado ou não existe.")
@@ -99,7 +94,7 @@ def maior_media_turma():
 
 while True:
     finalizar = False
-    print("Sistema de Gestão Escolar\n")
+    print("\nSistema de Gestão Escolar\n")
     opcao = int(input("Escolha uma das opções:\n"
                   "1) Acrescentar um aluno\n"
                   "2) Calcular média do aluno\n"
