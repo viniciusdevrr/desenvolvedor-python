@@ -1,3 +1,5 @@
+print("Atividade 3 - Sistema de Gestão Escolar")
+
 def acrescentar_aluno():
     try:
         nome = input("Digite o nome do aluno: ")
