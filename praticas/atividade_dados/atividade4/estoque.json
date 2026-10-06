@@ -1,0 +1,25 @@
+{
+    "nome": "Uefa Champions Store",
+    "produtos": [
+        {
+            "nome": "Camisa do Barcelona 26/27",
+            "preco": 180.0,
+            "quantidade": 30
+        },
+        {
+            "nome": "Camisa do Real Madrid 26/27",
+            "preco": 200.0,
+            "quantidade": 30
+        },
+        {
+            "nome": "Camisa do Bayern de Munich 26/27",
+            "preco": 200.0,
+            "quantidade": 30
+        },
+        {
+            "nome": "Camisa do Liverpool 26/27",
+            "preco": 200.0,
+            "quantidade": 30
+        }
+    ]
+}
