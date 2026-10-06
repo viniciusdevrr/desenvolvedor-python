@@ -1,4 +1,4 @@
-print("Questão 1: Sistema de Carrinho de Compras e Pagamento")
+print("Atividade 1: Sistema de Carrinho de Compras e Pagamento")
 
 carrinho = []
 total = 0.0
