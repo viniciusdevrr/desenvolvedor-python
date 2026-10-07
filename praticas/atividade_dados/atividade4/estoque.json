@@ -1,25 +1,25 @@
 {
-    "nome": "Uefa Champions Store",
+    "nome": "Tech Store",
     "produtos": [
         {
-            "nome": "Camisa do Barcelona 26/27",
-            "preco": 180.0,
+            "nome": "Teclado Mecânico RGB",
+            "preco": 252.0,
+            "quantidade": 25
+        },
+        {
+            "nome": "Mousepad 90cm Itachi Uchiha",
+            "preco": 80.0,
+            "quantidade": 20
+        },
+        {
+            "nome": "Mouse Logitech G Pro",
+            "preco": 300.0,
             "quantidade": 30
         },
         {
-            "nome": "Camisa do Real Madrid 26/27",
-            "preco": 200.0,
-            "quantidade": 30
-        },
-        {
-            "nome": "Camisa do Bayern de Munich 26/27",
-            "preco": 200.0,
-            "quantidade": 30
-        },
-        {
-            "nome": "Camisa do Liverpool 26/27",
-            "preco": 200.0,
-            "quantidade": 30
+            "nome": "Headset Gamer Redragon",
+            "preco": 150.0,
+            "quantidade": 15
         }
     ]
 }
