@@ -1,0 +1,11 @@
+Cliente: Vinicius
+RECIBO DO CARRINHO
+
+Produto: Arroz
+Preco do Produto: R$ 15.00
+Produto: Carne
+Preco do Produto: R$ 30.00
+Produto: Farofa
+Preco do Produto: R$ 7.50
+
+Total: R$ 52.50

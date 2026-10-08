@@ -10,7 +10,7 @@ usuario = input("Digite seu nome para iniciar a compra: ")
 while True:
     nome = input("Digite o nome do produto ou 'fim' para sair: ")
 
-    if nome.lower() == "fim":
+    if nome == "fim":
         break
 
     preco = float(input("Digite o preco: "))
@@ -19,8 +19,8 @@ while True:
 
 print("\n--- FINALIZANDO COMPRA ---")
 
-# 3. Geração do arquivo pagamento.txt
-with open("carrinho.txt", "w", encoding="utf-8") as arquivo:
+# 3. Geração do arquivo pagamento.txt (Corrigido conforme o enunciado)
+with open("pagamento.txt", "w", encoding="utf-8") as arquivo:
     arquivo.write(f"Cliente: {usuario}\n")
     arquivo.write("RECIBO DO CARRINHO\n\n")
 
@@ -32,26 +32,18 @@ with open("carrinho.txt", "w", encoding="utf-8") as arquivo:
 
     arquivo.write(f"\nTotal: R$ {total:.2f}")
 
-
-
-with open("carrinho.txt", "r", encoding="utf-8") as arquivo:
+# 4. Leitura e exibição final de pagamento
+with open("pagamento.txt", "r", encoding="utf-8") as arquivo:
     texto = arquivo.read()
     print(texto)
 
-    # 4. Leitura e exibição final de pagamento
-    print("\n--- PROCESSANDO PAGAMENTO ---")
+print("\n--- PROCESSANDO PAGAMENTO ---")
 
-    termo_busca = f"R$ {total:.2f}"
-    posicao = texto.find(termo_busca)
-    # 4. Leitura e exibição final de pagamento
-    print("\n--- PROCESSANDO PAGAMENTO ---")
+termo_busca = f"Total: R$ {total:.2f}"
 
-    # Procura se o texto "Total: R$ XX.XX" está dentro do arquivo
-    termo_busca = f"Total: R$ {total:.2f}"
+if termo_busca in texto:
+    valor = f"{total:.2f}"
+else:
+    valor = "Não encontrado"
 
-    if termo_busca in texto:
-        valor = f"{total:.2f}"
-    else:
-        valor = "Não encontrado"
-
-    print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")
+print(f"Compra processada com sucesso! Valor cobrado: R$ {valor}")

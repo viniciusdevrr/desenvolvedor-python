@@ -1,9 +1,0 @@
-Cliente: vinicius
-RECIBO DO CARRINHO
-
-Produto: arroz
-Preco do Produto: R$ 23.00
-Produto: feijao
-Preco do Produto: R$ 27.00
-
-Total: R$ 50.00
