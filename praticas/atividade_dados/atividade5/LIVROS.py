@@ -1,4 +1,4 @@
-livros = [
+novos_livros = [
     {
         "id": 31,
         "nome": "Ed & Lorraine Warren: Demonologistas",
@@ -35,3 +35,5 @@ livros = [
         "em_estoque": 40
     }
 ]
+
+# catalogo_livros.extend(novos_livros)
