@@ -13,5 +13,50 @@
         "gia": "",
         "ddd": "61",
         "siafi": "9701"
+    },
+    {
+        "cep": "70610-460",
+        "logradouro": "Quadra SIG Quadra 6",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Zona Industrial",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
+    },
+    {
+        "cep": "72115-700",
+        "logradouro": "Área Especial Setor C Norte",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Taguatinga Norte",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
+    },
+    {
+        "cep": "72415-120",
+        "logradouro": "Área Especial 2",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Setor Sul (Gama)",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
     }
 ]
