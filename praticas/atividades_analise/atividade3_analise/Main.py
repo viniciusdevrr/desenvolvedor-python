@@ -5,25 +5,42 @@ dados = pd.read_csv("dados_despadronizados.csv",
                            "numero": "string",
                            "salario": "string"})
 
-dados["cpf_formatado"] = (dados["cpf"]
-                           .str.replace(".", "")
-                           .str.replace("-", "")
-                           .str.replace(" ", ""))
+cpf_limpo = (dados["cpf"]
+             .str.replace(".", "", regex=False)
+             .str.replace("-", "", regex=False)
+             .str.replace(" ", "", regex=False))
+
+dados["cpf_formatado"] = cpf_limpo
+
+dados["cpf_valido"] = cpf_limpo.str.len() == 11
+
 
 dados["numero_formatado"] = (dados["numero"]
-                            # Remover tudo que não é número
                              .str.replace(r"\D", "", regex=True)
                              )
 
+dados["numero_valido"] = dados["numero_formatado"].str.len() > 10
+
+
 dados["salario_formatado"] = (dados["salario"]
-                            # Limpando caracteres indesejados (Símbolos, letras e espaços)
                               .str.replace(r"[^\d,.\-]", "", regex=True)
-                            # Removendo o ponto de milhar
                               .str.replace(r"\.(?=\d{3}(?:\.|,|$))", "", regex=True)
-                            # (Vírgula para Ponto)
-                              .str.replace(r",",".", regex=False)
-                            # Convertendo para float
+                              .str.replace(r",", ".", regex=False)
                               .astype(float)
                               )
+
+dados["salario_anual"] = dados["salario_formatado"] * 12
+
+
+dados = dados[[
+    "nome",
+    "cpf", "cpf_formatado", "cpf_valido",
+    "numero", "numero_formatado", "numero_valido",
+    "salario", "salario_formatado",
+    "salario_anual"
+]]
+
+
+dados.to_csv("dados_padronizados.csv", index=False)
 
 print(dados)
