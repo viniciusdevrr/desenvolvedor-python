@@ -1,0 +1,51 @@
+nome,preco,quantidade,setor,data_compra,data_vencimento
+Leite Integral,5.99,50,laticínios,2026-10-20,2026-11-05
+Pão Francês,0.99,100,padaria,2026-10-27,2026-10-29
+Manteiga,,15,laticínios,2026-10-25,2026-12-25
+Queijo Mussarela,35.9,0,laticínios,2026-10-22,2026-10-30
+Iogurte Morango,4.5,30,laticínios,2026-10-26,2026-10-31
+Arroz 5kg,25.0,100,mercearia,2026-10-15,2027-10-15
+Feijão Preto,8.9,0,mercearia,2026-10-20,2027-05-20
+Macarrão Espaguete,4.5,50,mercearia,2026-10-21,2027-04-21
+Molho de Tomate,,40,mercearia,2026-10-25,2027-10-25
+Óleo de Soja,7.99,60,mercearia,2026-10-22,2027-08-22
+Açúcar Refinado,5.5,80,mercearia,2026-10-26,2028-10-26
+Café em Pó,15.9,45,mercearia,2026-10-20,2027-10-20
+Biscoito Recheado,3.5,0,doces,2026-10-25,2027-03-25
+Chocolate em Barra,6.0,30,doces,2026-10-21,2027-05-21
+Bala de Goma,2.0,0,doces,2026-10-27,2026-11-27
+Refrigerante Cola,8.99,120,bebidas,2026-10-24,2027-04-24
+Suco de Laranja,,50,bebidas,2026-10-26,2026-11-02
+Cerveja Pilsen,4.5,200,bebidas,2026-10-20,2027-08-20
+Água Mineral,1.99,150,bebidas,2026-10-23,2028-10-23
+Vinho Tinto,45.0,20,bebidas,2026-10-15,
+Maçã Fuji,9.9,40,hortifruti,2026-10-25,2026-10-30
+Banana Prata,6.5,60,hortifruti,2026-10-26,2026-10-31
+Laranja Pera,4.5,0,hortifruti,2026-10-24,2026-11-05
+Alface Crespa,,25,hortifruti,2026-10-27,2026-10-31
+Tomate Carmem,8.9,50,hortifruti,2026-10-25,2026-11-01
+Cebola,5.5,40,hortifruti,2026-10-22,2026-11-15
+Batata Inglesa,7.0,80,hortifruti,2026-10-23,2026-11-10
+Cenoura,,35,hortifruti,2026-10-25,2026-11-05
+Frango Inteiro,18.9,40,açougue,2026-10-25,2026-10-30
+Carne Moída,25.0,30,açougue,2026-10-26,2026-10-29
+Bife Ancho,45.9,15,açougue,2026-10-24,2026-11-01
+Linguiça Toscana,19.9,0,açougue,2026-10-22,2026-11-10
+Peixe Tilápia,28.0,25,peixaria,2026-10-26,2026-10-29
+Salmão,89.9,10,peixaria,2026-10-25,2026-10-31
+Sabão em Pó,15.9,40,limpeza,2026-10-15,2029-10-15
+Detergente Líquido,2.5,100,limpeza,2026-10-20,2028-10-20
+Amaciante,12.5,30,limpeza,2026-10-22,2028-10-22
+Desinfetante,8.0,45,limpeza,2026-10-24,2028-10-24
+Água Sanitária,,60,limpeza,2026-10-26,2028-10-26
+Esponja de Aço,3.5,80,limpeza,2026-10-21,2030-10-21
+Papel Higiênico,18.9,50,higiene,2026-10-20,2030-10-20
+Pasta de Dente,5.5,0,higiene,2026-10-23,2028-10-23
+Escova de Dentes,12.0,30,higiene,2026-10-25,2030-10-25
+Sabonete em Barra,2.5,100,higiene,2026-10-26,2029-10-26
+Shampoo,15.9,40,higiene,2026-10-22,2028-10-22
+Condicionador,16.9,40,higiene,2026-10-22,2028-10-22
+Fralda Descartável,45.0,25,higiene,2026-10-20,2029-10-20
+Lenço Umedecido,12.9,0,higiene,2026-10-24,2028-10-24
+Ração para Cachorro,55.0,20,pet shop,2026-10-15,2027-10-15
+Areia para Gato,22.0,30,pet shop,2026-10-20,
