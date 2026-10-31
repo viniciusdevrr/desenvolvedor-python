@@ -47,7 +47,6 @@ df_estoque_supermercado["data_vencimento"] = pd.to_datetime(
     errors="coerce"
 )
 
-
 df_estoque_supermercado.to_csv("dados_padronizados.csv", index=False)
 
 print(df_estoque_supermercado)
